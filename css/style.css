@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1310px;
+}
+@media (max-width: 1335px) {
+  .container {
+    max-width: 1000px;
+  }
+  .container .block-2 {
+    display: block;
+  }
+}
+@media (max-width: 1020px) {
+  .container {
+    max-width: 700px;
+  }
+}
+@media (max-width: 720px) {
+  .container {
+    max-width: 480px;
+  }
+  .container .block-2 {
+    display: none;
+  }
+  .container .block-3 {
+    display: block;
+  }
+}
+@media (max-width: 475px) {
+  .container {
+    max-width: 320px;
+  }
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+@media (max-width: 1335px) {
+  .card {
+    display: none;
+  }
+}
+@media (max-width: 1020px) {
+  .card {
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  .card .list-item {
+    margin: 0;
+    display: block;
+  }
+}
+.card-item {
+  width: 425px;
+  height: 158px;
+  border: 1px solid #ECF0F2;
+  box-shadow: 8px 8px 14px rgba(0, 0, 0, 0.03);
+  padding: 0 22px;
+  background: white;
+}
+@media (max-width: 1335px) {
+  .card-item {
+    width: 470px;
+  }
+}
+@media (max-width: 1020px) {
+  .card-item {
+    width: 343px;
+  }
+}
+@media (max-width: 475px) {
+  .card-item {
+    width: 250px;
+    height: 90px;
+  }
+}
+.card-item:active {
+  background: #64B3BC;
+}
+.card-item:active .item__title {
+  color: white;
+}
+.card .item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card .item__title {
+  font-weight: 500;
+  color: #2B8892;
+  text-transform: uppercase;
+  font-size: 26px;
+  line-height: 36px;
+}
+.card .item__title_default {
+  text-transform: none;
+}
+@media (max-width: 475px) {
+  .card .item__title_default {
+    position: relative;
+    left: -25px;
+  }
+}
+@media (max-width: 475px) {
+  .card .item__title {
+    font-size: 18px;
+  }
+  .card .item__title_left {
+    position: relative;
+    left: -10px;
+  }
+}
+@media (max-width: 475px) {
+  .card .item__title {
+    line-height: 20px;
+  }
+  .card .item__title_position {
+    left: -16px;
+  }
+}
+.card .item__img {
+  display: block;
+  width: 111px;
+  height: 103px;
+}
+@media (max-width: 475px) {
+  .card .item__img {
+    width: 62px;
+    height: 57px;
+  }
+}
+
+.card-2 {
+  display: none;
+}
+@media (max-width: 1335px) {
+  .card-2 {
+    display: flex;
+  }
+}
+@media (max-width: 720px) {
+  .card-2 {
+    display: none;
+  }
+}
+
+.card-3 {
+  display: none;
+}
+@media (max-width: 720px) {
+  .card-3 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+.hoverActive:hover {
+  background: #64B3BC;
+}
+.hoverActive:hover h2 {
+  color: white;
+}
+
+@media (max-width: 1335px) {
+  .block {
+    display: none;
+  }
+}
+.block-item {
+  display: none;
+  margin: 0 auto;
+  width: 930px;
+  height: 817px;
+  padding: 46px 68px 92px;
+  border: 1px solid #ECF0F2;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+@media (max-width: 1020px) {
+  .block-item {
+    width: 700px;
+    height: 740px;
+    padding: 30px 34px;
+  }
+  .block-item__img {
+    margin: 0 auto;
+    display: block;
+    width: 600px;
+  }
+}
+@media (max-width: 720px) {
+  .block-item {
+    width: 450px;
+    height: 780px;
+  }
+  .block-item__img {
+    width: 380px;
+  }
+}
+@media (max-width: 475px) {
+  .block-item {
+    width: 288px;
+    height: 900px;
+    padding: 25px 22px;
+  }
+  .block-item__img {
+    width: 240px;
+  }
+}
+.block-item_active {
+  display: block;
+}
+.block-item_visible {
+  opacity: 1;
+}
+.block-item__title {
+  font-weight: 500;
+  font-size: 26px;
+  text-transform: uppercase;
+  line-height: 36.4px;
+  margin-bottom: 20px;
+}
+@media (max-width: 475px) {
+  .block-item__title {
+    font-size: 25px;
+  }
+}
+.block-item__title_default {
+  text-transform: none;
+}
+.block-item__text {
+  line-height: 24px;
+  width: 700px;
+  color: #2B8892;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+@media (max-width: 1020px) {
+  .block-item__text {
+    width: 600px;
+  }
+}
+@media (max-width: 720px) {
+  .block-item__text {
+    width: 350px;
+  }
+}
+@media (max-width: 475px) {
+  .block-item__text {
+    width: 212px;
+    margin-bottom: 15px;
+  }
+}
+.block-item__text_sub {
+  color: black;
+  width: 100%;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.activeButton:focus {
+  background: #64B3BC;
+}
+.activeButton:focus .item__title {
+  color: white;
+}/*# sourceMappingURL=style.css.map */

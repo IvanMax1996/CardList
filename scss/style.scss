@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+
+// Шрифт
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+
+// Контейнер
+.container {
+  margin: 0 auto;
+  max-width: 1310px;
+  @media (max-width: 1335px) {
+    max-width: 1000px;
+    .block-2 {
+      display: block;
+    }
+  }
+  @media (max-width: 1020px) {
+    max-width: 700px;
+  }
+  @media (max-width: 720px) {
+    max-width: 480px;
+    .block-2 {
+      display: none;
+    }
+    .block-3 {
+      display: block;
+    }
+  }
+  @media (max-width: 475px) {
+    max-width: 320px;
+  }
+}
+
+
+// Карточки
+.card {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+
+  @media (max-width: 1335px) {
+    display: none;
+  }
+
+  @media (max-width: 1020px) {
+    flex-wrap: nowrap;
+    align-items: center;
+    
+    .list-item {
+      margin: 0;
+      display: block;
+    }
+  }
+  &-item {
+    width: 425px;
+    height: 158px;
+    border: 1px solid #ECF0F2;
+    box-shadow: 8px 8px 14px rgba(0, 0, 0, 0.03);
+    padding: 0 22px;
+    background: white;
+    @media (max-width: 1335px) {
+      width: 470px;
+    }
+    @media (max-width: 1020px) {
+      width: 343px;
+    }
+    @media (max-width: 475px) {
+      width: 250px;
+      height: 90px;
+    }
+    &:active {
+      background: #64B3BC;
+      .item {
+        &__title {
+          color: white;
+        }
+      }
+    }
+  }
+  .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__title {
+      font-weight: 500;
+      color: #2B8892;
+      text-transform: uppercase;
+      font-size: 26px;
+      line-height: 36px;
+      &_default {
+        text-transform: none;
+        @media (max-width: 475px) {
+          position: relative;
+          left: -25px
+        }
+      }
+      @media (max-width: 475px) {
+        font-size: 18px;
+        &_left {
+          position: relative;
+          left: -10px;
+        }
+      }
+      @media (max-width: 475px) {
+        line-height: 20px;
+        &_position {
+          left: -16px;
+        }
+      }
+    }
+    &__img {
+      display: block;
+      width: 111px;
+      height: 103px;
+      @media (max-width: 475px) {
+        width: 62px;
+        height: 57px;
+      }
+    }
+  }
+}
+
+
+// Подолжка (два ряда)
+.card-2 {
+  display: none;
+  @media (max-width: 1335px) {
+    display: flex;
+  }
+  @media (max-width: 720px) {
+    display: none;
+  }
+}
+
+
+// Подолжка (один ряд)
+.card-3 {
+  display: none;
+  @media (max-width: 720px) {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+
+// Наведение на карточку
+.hoverActive {
+  &:hover {
+    background: #64B3BC;
+    h2 {
+      color: white;
+    }
+  }
+}
+
+
+// Контент-блоки
+.block {
+  @media (max-width: 1335px) {
+    display: none;
+  }
+  &-item {
+    display: none;
+    margin: 0 auto;
+    width: 930px;
+    height: 817px;
+    padding: 46px 68px 92px;
+    border: 1px solid #ECF0F2;
+    opacity: 0;
+    transition: opacity 0.2s;
+    @media (max-width: 1020px) {
+      width: 700px;
+      height: 740px;
+      padding: 30px 34px;
+      &__img {
+        margin: 0 auto;
+        display: block;
+        width: 600px;
+      }
+    }
+    @media (max-width: 720px) {
+      width: 450px;
+      height: 780px;
+      &__img {
+        width: 380px;
+      }
+    }
+    @media (max-width: 475px) {
+      width: 288px;
+      height: 900px;
+      padding: 25px 22px;
+      &__img {
+        width: 240px;
+      }
+    }
+    &_active {
+      display: block;
+    }
+    &_visible {
+      opacity: 1;
+    }
+    &__title {
+      font-weight: 500;
+      font-size: 26px;
+      text-transform: uppercase;
+      line-height: 36.4px;
+      margin-bottom: 20px;
+      @media (max-width: 475px) {
+        font-size: 25px;
+      }
+      &_default {
+        text-transform: none;
+      }
+    }
+    &__text {
+      line-height: 24px;
+      width: 700px;
+      color: #2B8892;
+      margin-bottom: 30px;
+      font-weight: 500;
+      @media (max-width: 1020px) {
+        width: 600px;
+      }
+      @media (max-width: 720px) {
+        width: 350px;
+      }
+      @media (max-width: 475px) {
+        width: 212px;
+        margin-bottom: 15px;
+      }
+      &_sub {
+        color: black;
+        width: 100%;
+        line-height: 24px;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+
+.activeButton {
+  &:focus {
+    background: #64B3BC;
+    .item {
+      &__title {
+        color: white;
+      }
+    }
+  }
+}
